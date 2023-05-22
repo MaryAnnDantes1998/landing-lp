@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>About | Saint Francis of Assisi College - Laspiñas</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <script type="text/javascript">
+//  window.addEventListener("resize", function() {
+//      "use strict"; window.location.reload(); 
+//  });
+
+    document.addEventListener("DOMContentLoaded", function(){
+        
+
+        /////// Prevent closing from click inside dropdown
+        document.querySelectorAll('.dropdown-menu').forEach(function(element){
+            element.addEventListener('click', function (e) {
+              e.stopPropagation();
+            });
+        })
+
+
+
+        // make it as accordion for smaller screens
+        if (window.innerWidth < 992) {
+
+            // close all inner dropdowns when parent is closed
+            document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
+                everydropdown.addEventListener('hidden.bs.dropdown', function () {
+                    // after dropdown is hidden, then find all submenus
+                      this.querySelectorAll('.submenu').forEach(function(everysubmenu){
+                        // hide every submenu as well
+                        everysubmenu.style.display = 'none';
+                      });
+                })
+            });
+            
+            document.querySelectorAll('.dropdown-menu a').forEach(function(element){
+                element.addEventListener('click', function (e) {
+        
+                    let nextEl = this.nextElementSibling;
+                    if(nextEl && nextEl.classList.contains('submenu')) {    
+                        // prevent opening link if link needs to open dropdown
+                        e.preventDefault();
+                        console.log(nextEl);
+                        if(nextEl.style.display == 'block'){
+                            nextEl.style.display = 'none';
+                        } else {
+                            nextEl.style.display = 'block';
+                        }
+
+                    }
+                });
+            })
+        }
+        // end if innerWidth
+    }); 
+    // DOMContentLoaded  end
+</script>
+
+    <!-- Favicon -->
+    <link href="img/sfac_logo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="" class="navbar-brand p-0">
+                <img src="img/logo.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link active">About</a>
+                     <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                     <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">College Inquiries</a>
+                        <div class="dropdown-menu m-0">
+                            </a>
+                            <center><a><strong style="color:#ff3333;">Collegiate Courses</strong></a></center>
+                            <a href="bsn.html" class="dropdown-item">Bachelor of Science in Nursing</a>
+                            <a href="bsee.html" class="dropdown-item">Bachelor of Science in Electrical Engineering</a>
+                            <a href="bs_elect_eng.html" class="dropdown-item">Bachelor of Science in Electronics Engineering</a>
+                            <a href="bsce.html" class="dropdown-item">Bachelor of Science in Computer Engineering</a>
+                             <a href="bscs.html" class="dropdown-item">Bachelor of Science in Computer Science</a>
+                            <a href="bsba.html" class="dropdown-item">Bachelor of Science in Business Administration</a>
+                             <a href="bshm.html" class="dropdown-item">Bachelor of Science in Hospitality Management</a>
+                            <a href="bamp.html" class="dropdown-item">Bachelor of Arts, Major in Psyschology</a>
+                             <a href="beetcp.html" class="dropdown-item">Bachelor of Elementary Education/Teacher Certfication Program</a>
+                            <a href="bsetcp.html" class="dropdown-item">Bachelor of Secondary Education/Teacher Certification Program</a>
+                            <center><a><strong style="color:#ff3333;">Graduate Programs</strong></a></center>
+                            <a><strong style="color:#ff3333;">&nbsp;&nbsp;&nbsp;&nbsp;MBA</strong></a>
+                             <a href="mba.html" class="dropdown-item">Master in Business Admnistration</a>
+                             <a><strong style="color:#ff3333;">&nbsp;&nbsp;&nbsp;&nbsp;MAEd</strong></a>
+                             <a href="mae.html" class="dropdown-item">Masters of Arts in Education</a>
+                            <a href="mem.html" class="dropdown-item">Major in Education Management</a>
+                        </div>
+                    </div>      
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Department</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="department_bed.html" class="dropdown-item">Basic Education</a>
+                            <a href="department_hed.html" class="dropdown-item">Higher Education</a>
+                        </div>
+                    </div>
+                   <li class="nav-item dropdown">
+            <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">Student Services</a>
+            <ul class="dropdown-menu dropdown-menu-right">
+                <li><a class="dropdown-item" href="#"> Bacoor &raquo; </a>
+                    <ul class="submenu submenu-left dropdown-menu">
+                    <li><a class="dropdown-item" href="https://stfrancisbacoor.com/sfac-bac/pages/login/sign-in.php">HED Enrollment</a></li>
+                    <li><a class="dropdown-item" href="https://stfrancisbacoor.com/sfac-bac-ongrade/pages/login/login.php">HED Online Grade</a></li>
+                    <li><a class="dropdown-item" href="https://stfrancisbacoor.com/library-bacoor/index/basco-html/index.html">HED Library</a></li>
+                    <li><a class="dropdown-item" href="https://stfrancisbacoor.com/basic-edu/bed/pages/bed-login/login.php">BED Enrollment</a></li>
+                    <li><a class="dropdown-item" href="https://stfrancisbacoor.com/samplebasic/Tempo/index.php">BED Library</a></li>
+                 </ul>
+              </li>
+                 <li><a class="dropdown-item" href="#"> Las Piñas &raquo; </a>
+                    <ul class="submenu submenu-left dropdown-menu">
+                    <li><a class="dropdown-item" href="https://stfrancisbacoor.com/sfac-lp/pages/login/sign-in.php">HED Enrollment</a></li>
+                    <li><a class="dropdown-item" href="https://stfrancisbacoor.com/sfac-lp-ongrade/pages/login/login.php">HED Online Grade</a></li>
+                    <li><a class="dropdown-item" href="https://stfrancisbacoor.com/library-lp/index/memorial/index.html">HED Library</a></li>
+                    <li><a class="dropdown-item" href="https://stfrancisbacoor.com/bedlp-enroll/html/pages/bed-login/login.php">BED Enrollment</a></li>
+                    <li><a class="dropdown-item" href="#">GSBE Library</a></li>
+                 </ul>
+              </li>
+                 <li><a class="dropdown-item" href="#"> Los Baños &raquo; </a>
+                 <ul class="submenu submenu-left dropdown-menu">
+                    <li><a class="dropdown-item" href="#">BED Library</a></li>
+                 </ul>
+              </li>
+                </div>
+                <a href="#" class="get-started-btn">Be One of Us</a>
+            </div>
+        </nav>
+
+        <div class="container-fluid bg-primary py-5 mb-5 hero-header">
+            <div class="container py-5">
+                <div class="row justify-content-center py-5">
+                    <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+                        <h1 class="display-3 text-white animated slideInDown">About Us.</h1>
+                        <nav aria-label="breadcrumb">
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar & Hero End -->
+
+
+  <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100" src="img/12.jpg" alt="" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="section-title bg-white text-start text-primary pe-3">ABOUT OUR</h6>
+                    <h1 class="mb-4"><span class="text-primary">SCHOOL</span></h1>
+                    <p class="mb-4">Saint Francis of Assisi College had its beginnings in 1981, when the husband-and-wife team of Dr. Evangeline Oñas-Orosco and Dr. Arturo Agapito Orosco, Sr., opened a two-classroom preparatory school in Talon III, Las Piñas City to provide affordable quality education for young children. By 1983, the school’s popularity was such that a two-storey, full elementary school building had to be constructed to meet the needs of the surrounding community. The opening of the high school department quickly followed in 1986, ensuring placements for SFAC graduates at the secondary level. At the same time, two new campuses were established, one in Taguig City, and one in Los Baños, Laguna.</p>
+                    <p class="mb-4">In 1989, the tertiary level in SFAC came into being offering several courses both in degree and non-degree programs. New campuses have since been added: the Pamplona, Las Piñas campus in 1990, the Bacoor, Cavite campus in 1994, the Alabang, Muntinlupa campus in 1996. In the same year, 1996, Saint Anthony School of Las Piñas came under SFAC supervision and management. Dasmariñas, Cavite campus opened in 1999. The Biñan campus, in Laguna opened in 2006. In 2010, the Los Baños campus was renamed Saint Anthony School of Los Baños, named after the patron saint of the locality. The 10th campus, located in Sta. Rosa, Laguna accepts enrollees starting S.Y. 2012 – 2013. In line with corporate branding moves, the Pamplona campus, being the smallest campus, moved its operation to the main campus in 2014.</p>
+                   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100" src="img/2.jpg" alt="" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                   
+                    <p class="mb-4">Dr. Arturo O. Orosco, Jr., succeeding his mother as school president in 2012, steered the school system into a brand where bayanihan spirit cultivates the deep heritage of the school. Bold moves and decisions are continuously being made to meet the new leadership’s branding innovations and to meet the founders’ objective of serving more communities, and societies, at large.</p>
+                    <p class="mb-4">Today, Saint Francis of Assisi College offers complete education from preschool up to the graduate level of education.</p>
+                     <p class="mb-4">In its more than two decades of existence, SFAC, recognized by the Department of Education (DepEd), Technical Education and Skills Development Authority (TESDA) and by the Commission on Higher Education (CHED), has pursued programs of instruction grounded on academic, cultural and sports excellence and tempered by Christian and Franciscan values exemplified by its patron, Saint Francis of Assisi. The Bureau of Immigration has granted SFAC the authority to accept foreign students.</p>
+                    <p class="mb-4">A rich and responsive curriculum, a corps of well-trained, experienced and caring teachers, dynamic administrators, and an atmosphere conducive to excellence — all make up the lifelong learning experiences at SFAC.</p>
+                     <p class="mb-4">To keep abreast with the rapid growth and changes in the educational trends in the country and elsewhere, SFAC established its Center for Excellence in Academics, Research and Training Services (Centrex) which serves as the standard-setting entity of its academic operations. Committed in providing a value-laden, excellent education, the Centrex focuses on seven (7) areas: Curriculum Development, Textbook Evaluation, Institutional Examinations, Review of Academic Policies and Procedures, Faculty Training and Ranking, Organization/Leadership Development, and Institutional Research. The Centrex ensures that uniform standards are observed and maintained in all SFAC campuses. Aside from the Centrex, a Central Office (C.O.) and a Central Purchasing (C.P.) unit likewise guarantee the operational stability of SFAC for the benefit of its employees, suppliers, students and other stakeholders.</p>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+<!-- Process Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
+         </div>
+            <div class="row gy-5 gx-4 justify-content-center">
+                <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="position-relative border border-primary pt-5 pb-4 px-4">
+                        <h5 class="mt-4"><strong style="color:#ff3333;">VISION</strong></h5>
+                        <hr class="w-25 mx-auto bg-primary mb-1">
+                        <hr class="w-50 mx-auto bg-primary mt-0">
+                        <p class="mb-0">Saint Francis of Assisi College (SFAC) is a hub for progressive and holistic education, guided by the virtues of Saint Francis of Assisi that empowers learners with a solid academic foundation enriched by physical, spiritual, and cultural advancement.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="position-relative border border-primary pt-5 pb-4 px-4">
+                    <h5 class="mt-4"><strong style="color:#ff3333;">MISSION</strong></h5>
+                        <hr class="w-25 mx-auto bg-primary mb-1">
+                        <hr class="w-50 mx-auto bg-primary mt-0">
+
+                        <p class="mb-0">In line with this vision, SFAC is fully committed to:</p><br>
+
+                        <p class="mb-0">1. Deliver relevant, well-designed quality education from the Basic Education to the Graduate level, through its corps of highly-trained faculty.</p>
+
+                        <p class="mb-0">2. Nurture an ideal environment that hones students for academic success, molds them in cultural awareness, and prepares them for sustained participation and leadership in sports and athletics.</p>
+
+                        <p class="mb-0">3. Incorporate a values system in the curriculum that promotes love of God, family, and country.</p>
+
+                        <p class="mb-0">4. Integrate time-honored Filipino values in the pursuit of personal advancement.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="position-relative border border-primary pt-5 pb-4 px-4">
+                        <h5 class="mt-4"><strong style="color:#ff3333;">CORE VALUES</strong></h5>
+                        <hr class="w-25 mx-auto bg-primary mb-1">
+                        <hr class="w-50 mx-auto bg-primary mt-0">
+
+                        <p class="mb-0">SFAC is guided by these core values:</p><br>
+
+                        <p class="mb-0"><strong style="color:#111;">Commitment </strong>there is a commitment by each and every member of the Franciscan community to the vision set forth by the Institution.</p>
+
+                        <p class="mb-0"><strong style="color:#111">Opportunity </strong>there is a constant desire to seize the opportunity to become better members and leaders of the community, as well as contributors to nation- building.</p>
+
+                        <p class="mb-0"><strong style="color:#111;">Respect </strong>there is an utmost respect for one’s self, peers, and co-stakeholders in the Franciscan community.</p>
+
+                        <p class="mb-0"><strong style="color:#111;">Excellence</strong> there is a drive to always make effective use of talents and skills in order to produce outputs of the highest quality.</p>
+                    </div>
+                 </div>
+             </div>
+          </div>
+        </div>
+    </div>
+</div>
+    <!-- Process Start End -->
+     
+     
+   <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                   <h4 class="text-white mb-3">Saint Francis of Assisi College - Las Piñas Campus</h4>
+                    <h5 class="text-white mb-3">45 Admiral, Las Piñas, 1740 Metro Manila, Philippines</h5>
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Copyright @.</a> All Right Reserved
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Follow Us</h4>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://twitter.com/mysfacs"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/mysfaclp"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/c/mysfacs"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/company/saint-francis-of-assisi-college"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

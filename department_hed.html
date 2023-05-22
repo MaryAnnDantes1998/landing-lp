@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hed | Saint Francis of Assisi College - Laspiñas</title>
+     <style>
+      marquee{
+      font-size: 30px;
+      font-weight: 800;
+      color: #8ebf42;
+      font-family: sans-serif;
+      }
+    </style>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <script type="text/javascript">
+//  window.addEventListener("resize", function() {
+//      "use strict"; window.location.reload(); 
+//  });
+
+    document.addEventListener("DOMContentLoaded", function(){
+        
+
+        /////// Prevent closing from click inside dropdown
+        document.querySelectorAll('.dropdown-menu').forEach(function(element){
+            element.addEventListener('click', function (e) {
+              e.stopPropagation();
+            });
+        })
+
+
+
+        // make it as accordion for smaller screens
+        if (window.innerWidth < 992) {
+
+            // close all inner dropdowns when parent is closed
+            document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
+                everydropdown.addEventListener('hidden.bs.dropdown', function () {
+                    // after dropdown is hidden, then find all submenus
+                      this.querySelectorAll('.submenu').forEach(function(everysubmenu){
+                        // hide every submenu as well
+                        everysubmenu.style.display = 'none';
+                      });
+                })
+            });
+            
+            document.querySelectorAll('.dropdown-menu a').forEach(function(element){
+                element.addEventListener('click', function (e) {
+        
+                    let nextEl = this.nextElementSibling;
+                    if(nextEl && nextEl.classList.contains('submenu')) {    
+                        // prevent opening link if link needs to open dropdown
+                        e.preventDefault();
+                        console.log(nextEl);
+                        if(nextEl.style.display == 'block'){
+                            nextEl.style.display = 'none';
+                        } else {
+                            nextEl.style.display = 'block';
+                        }
+
+                    }
+                });
+            })
+        }
+        // end if innerWidth
+    }); 
+    // DOMContentLoaded  end
+</script>
+
+    <!-- Favicon -->
+    <link href="img/sfac_logo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="" class="navbar-brand p-0">
+                 <img src="img/logo.png" alt="Logo"> 
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                     <a href="contact.html" class="nav-item nav-link active">Contact Us</a>
+                     <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">College Inquiries</a>
+                        <div class="dropdown-menu m-0">
+                            </a>
+                            <center><a><strong style="color:#ff3333;">Collegiate Courses</strong></a></center>
+                            <a href="bsn.html" class="dropdown-item">Bachelor of Science in Nursing</a>
+                            <a href="bsee.html" class="dropdown-item">Bachelor of Science in Electrical Engineering</a>
+                            <a href="bs_elect_eng.html" class="dropdown-item">Bachelor of Science in Electronics Engineering</a>
+                            <a href="bsce.html" class="dropdown-item">Bachelor of Science in Computer Engineering</a>
+                             <a href="bscs.html" class="dropdown-item">Bachelor of Science in Computer Science</a>
+                            <a href="bsba.html" class="dropdown-item">Bachelor of Science in Business Administration</a>
+                             <a href="bshm.html" class="dropdown-item">Bachelor of Science in Hospitality Management</a>
+                            <a href="bamp.html" class="dropdown-item">Bachelor of Arts, Major in Psyschology</a>
+                             <a href="beetcp.html" class="dropdown-item">Bachelor of Elementary Education/Teacher Certfication Program</a>
+                            <a href="bsetcp.html" class="dropdown-item">Bachelor of Secondary Education/Teacher Certification Program</a>
+                            <center><a><strong style="color:#ff3333;">Graduate Programs</strong></a></center>
+                            <a><strong style="color:#ff3333;">&nbsp;&nbsp;&nbsp;&nbsp;MBA</strong></a>
+                             <a href="mba.html" class="dropdown-item">Master in Business Admnistration</a>
+                             <a><strong style="color:#ff3333;">&nbsp;&nbsp;&nbsp;&nbsp;MAEd</strong></a>
+                             <a href="mae.html" class="dropdown-item">Masters of Arts in Education</a>
+                            <a href="mem.html" class="dropdown-item">Major in Education Management</a>
+                        </div>
+                    </div>      
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Department</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="department_bed.html" class="dropdown-item">Basic Education</a>
+                            <a href="department_hed.html" class="dropdown-item">Higher Education</a>
+                        </div>
+                    </div>
+                        <li class="nav-item dropdown">
+            <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">Student Services</a>
+            <ul class="dropdown-menu dropdown-menu-right">
+                <li><a class="dropdown-item" href="#"> Bacoor &raquo; </a>
+                    <ul class="submenu submenu-left dropdown-menu">
+                    <li><a class="dropdown-item" href="https://stfrancisbacoor.com/sfac-bac/pages/login/sign-in.php">HED Enrollment</a></li>
+                    <li><a class="dropdown-item" href="https://stfrancisbacoor.com/sfac-bac-ongrade/pages/login/login.php">HED Online Grade</a></li>
+                    <li><a class="dropdown-item" href="https://stfrancisbacoor.com/library-bacoor/index/basco-html/index.html">HED Library</a></li>
+                    <li><a class="dropdown-item" href="https://stfrancisbacoor.com/basic-edu/bed/pages/bed-login/login.php">BED Enrollment</a></li>
+                    <li><a class="dropdown-item" href="https://stfrancisbacoor.com/samplebasic/Tempo/index.php">BED Library</a></li>
+                 </ul>
+              </li>
+                 <li><a class="dropdown-item" href="#"> Las Piñas &raquo; </a>
+                    <ul class="submenu submenu-left dropdown-menu">
+                    <li><a class="dropdown-item" href="https://stfrancisbacoor.com/sfac-lp/pages/login/sign-in.php">HED Enrollment</a></li>
+                    <li><a class="dropdown-item" href="https://stfrancisbacoor.com/sfac-lp-ongrade/pages/login/login.php">HED Online Grade</a></li>
+                    <li><a class="dropdown-item" href="https://stfrancisbacoor.com/library-lp/index/memorial/index.html">HED Library</a></li>
+                    <li><a class="dropdown-item" href="https://stfrancisbacoor.com/bedlp-enroll/html/pages/bed-login/login.php">BED Enrollment</a></li>
+                    <li><a class="dropdown-item" href="#">GSBE Library</a></li>
+                 </ul>
+              </li>
+                 <li><a class="dropdown-item" href="#"> Los Baños &raquo; </a>
+                 <ul class="submenu submenu-left dropdown-menu">
+                    <li><a class="dropdown-item" href="#">BED Library</a></li>
+                 </ul>
+              </li>
+                </div>
+                <a href="#" class="get-started-btn">Be One of Us</a>
+            </div>
+        </nav>
+
+        <div class="container-fluid bg-primary py-5 mb-5 hero-header">
+            <div class="container py-5">
+                <div class="row justify-content-center py-5">
+                    <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+                        <h1 class="display-3 text-white animated slideInDown">Higher Education Department</h1>
+                        <nav aria-label="breadcrumb">
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar & Hero End -->
+
+    <center><video width="850" height="400" controls>
+  <source src="img/hed_vid.mp4" type="video/mp4">
+</video></center><br><br>
+
+       <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">OFFERED</h6>
+                <h1 class="mb-5">PROGRAMS</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <h5>BACHELOR OF EARLY CHILDHOOD EDUCATION</h5><br>
+                            <h5>BACHELOR OF ELEMENTARY EDUCATION</h5><br>
+                            <h5>BACHELOR OF SECONDARY EDUCATION</h5><br>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                    <strong style="color:#ff3333;">
+                    <h5><li><i class=""></i>  Major in Mathematics</li><br><br>
+                    <li><i class=""></i>  Major in English</li><br><br>
+                    <li><i class=""></i>  Major in Filipino</li><br><br></strong></h5>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <h5>BACHELOR OF PHYSICAL EDUCATION</h5><br>
+                            <h5>BS IN COMPUTER SCIENCE</h5><br>
+                            <h5>BS IN HOSPITALITY MANAGEMENT</h5><br>
+                            <h5>BS IN BUSINESS ADMINISTRATION</h5><br>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                    <strong style="color:#ff3333;">
+                    <h5><li><i class=""></i> Major in Operations Management<b style="color:black;"> (NEW!)</b></li><br><br>
+                    <li><i class=""></i>  Major in Financial Management</li><br><br>
+                    <li><i class=""></i>  Major in Marketing Management</li><br><br></strong></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+  
+
+     <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">ONLINE</h6>
+                <h1 class="mb-5">ENROLLMENT</h1>
+              <div class="icon-box">
+                <center><i class="ri-store-line" style="color: #ffbb2c;"></i>
+                <a class="btn btn-primary py-3 px-5 mt-2" href="https://stfrancisbacoor.com/sfac-bac/pages/inquiry/online.inquiry.php">HIGHER EDUCATION</a></center>
+               
+              </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+ <center> <div class="col-lg-6 order-1 order-lg-2 aos-init aos-animate" data-aos="fade-center" data-aos-delay="100">
+          <div class="row">
+                <img src="img/7.jpg" class="img-fluid" alt="">
+              </div>
+          </div></center>
+            </div>
+          </div><br><br>
+
+           <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">COLLEGE</h6>
+                <h1 class="mb-5">DEPARTMENT</h1>
+            </div>
+
+<center><div class="col-lg-6 order-1 order-lg-2 aos-init aos-animate" data-aos="fade-center" data-aos-delay="100">
+          <div class="row">
+                <img src="img/cs.png" class="img-fluid" alt="">
+                <img src="img/educ.png" class="img-fluid" alt="">
+                <img src="img/ba.png" class="img-fluid" alt="">
+                <img src="img/hm.png" class="img-fluid" alt="">
+              </div>
+          </div></center>
+            </div>
+          </div><br>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Saint Francis of Assisi College - Las Piñas Campus</h4>
+                    <h5 class="text-white mb-3">45 Admiral, Las Piñas, 1740 Metro Manila, Philippines</h5>
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Copyright @.</a> All Right Reserved
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Follow Us</h4>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://twitter.com/mysfacs"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/mysfaclp"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/c/mysfacs"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/company/saint-francis-of-assisi-college"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+             </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
